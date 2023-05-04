@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>PODCASTS</title>
+    <link th:href="@{/css/styles.css}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bellota+Text&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<!-- nav bar - start -->
+<header>
+    <a href="#" class="logo"><b>EMPIRE</b></a>
+    <div class="group1">
+        <ul class="nav">
+            <li><a href="quiz.html">Sections <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown_menu">
+                    <ul class="fordropmenu">
+                        <li><a href="ballet.html">Ballet</a></li>
+                        <li><a href="#">Music</a></li>
+                        <li><a href="#">Literature</a></li>
+                        <li><a href="#">Theater</a></li>
+                        <li><a href="#">Cinematography</a></li>
+                    </ul>
+                </div> <!-- end drop menu  -->
+            </li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="podcasts.html">Podcasts</a></li>
+            <li><a href="compilations.html">Compilations</a></li>
+            <li><a href="store.html">Store</a></li>
+        </ul>
+        <div class="search">
+          <span class="icon1">
+            <ion-icon name="search-outline" class="searchBtn"></ion-icon>
+            <ion-icon name="close-outline" class="closeBtn"></ion-icon>
+          </span>
+            <span class="icon2 mailIcon">
+            <ion-icon name="mail-outline"></ion-icon>
+          </span>
+            <span class="icon2 personIcon">
+            <ion-icon name="person-outline"></ion-icon>
+          </span>
+        </div> <!-- end search -->
+    </div> <!--end group1 -->
+    <div class="searchBox">
+        <input type="text" placeholder="Search...">
+    </div> <!-- end searchbox -->
+</header>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script>
+    let searchBtn = document.querySelector('.searchBtn');
+    let closeBtn = document.querySelector('.closeBtn');
+    let searchBox = document.querySelector('.searchBox');
+    let mailIcon = document.querySelector('.mailIcon');
+    let personIcon = document.querySelector('.personIcon');
+    let searchIcons = document.querySelectorAll('.icon2');
+
+    searchBtn.addEventListener('click', function(){
+       searchBox.classList.add('active');
+       closeBtn.style.display = 'inline-block';
+       searchIcons.forEach(function(icon) {
+         icon.style.display = 'none';
+       });
+    });
+
+    closeBtn.addEventListener('click', function(){
+       searchBox.classList.remove('active');
+       closeBtn.style.display = 'none';
+       searchIcons.forEach(function(icon) {
+         icon.style.display = 'inline-block';
+       });
+    });
+  </script>
+<style>
+    .hidden {
+      display: none;
+    }
+  </style>
+<!-- nav bar - end -->
+<div class="pod1">
+    <h1>
+        Listen, get<br> motivation,<br> develop, refine
+    </h1>
+    <img src="./img/line2.png">
+</div>
+<!-- 1 line -->
+<div class="all">
+
+    <div class="pod2">
+        <div class="pod3">
+            <img src="./img/podpic1.png">
+            <h2>Event presents</h2>
+        </div>
+        <div class="pod4">
+            <img src="./img/podpic2.png">
+            <h2>Weekly podcast: Every<br> saturday</h2>
+        </div>
+    </div>
+    <!-- 2 line -->
+    <div class="pod2">
+        <div class="pod3">
+            <img src="./img/podpic3.png">
+            <h2>Business of style:<br> Hilary Moorse</h2>
+        </div>
+        <div class="pod4">
+            <img src="./img/podpic4.png">
+            <h2>Dear diary: Miriam<br> Jones</h2>
+        </div>
+    </div>
+    <!-- 3 line -->
+    <div class="pod2">
+        <div class="pod3">
+            <img src="./img/podpic5.png">
+            <h2>The bold career<br> project:Ian Christie</h2>
+        </div>
+        <div class="pod4">
+            <img src="./img/podpic6.png">
+            <h2>Featurijng: William<br> Candy & Manila Lopez</h2>
+        </div>
+    </div>
+    <!-- 4 line -->
+    <div class="pod2">
+        <div class="pod3">
+            <img src="./img/podpic7.png">
+            <h2>Night with music</h2>
+        </div>
+        <div class="pod4">
+            <img src="./img/podpic8.png">
+            <h2>Real estate: Making<br> Reality Dreams</h2>
+        </div>
+    </div>
+    <!-- 5 line -->
+    <div class="pod2">
+        <div class="pod3">
+            <img src="./img/podpic9.png">
+            <h2>Street sport<br> benefits</h2>
+        </div>
+        <div class="pod4">
+            <img src="./img/podpic10.png">
+            <h2>Podcast night: Talk<br> show</h2>
+        </div>
+    </div>
+</div><!-- class all - end -->
+<!-- footer - start  -->
+<div class="footerforpodcasts">
+    <div class="news3">
+        <h1>EMPIRE</h1>
+        <ion-icon name="logo-facebook"></ion-icon>
+        <ion-icon name="logo-twitter"></ion-icon>
+        <ion-icon name="logo-instagram"></ion-icon>
+    </div>
+    <div class="news4"></div>
+    <h2>About our project <br>
+        <ion-icon name="mail-open-outline"></ion-icon>     Email: empire@gmail.com<br>
+        <ion-icon name="location-outline"></ion-icon>     Address: Kyrgyzstan, Bishkek, empire street, 12B<br>
+        <ion-icon name="call-outline"></ion-icon>     Contacts: +996 773 062 755
+    </h2>
+</div><!-- end group 12 -->
+</div>
+<!-- end group 10 -->
+<!-- footer - end -->
+
+
+</body>
+</html>
